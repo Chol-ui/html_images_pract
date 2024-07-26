@@ -3,20 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Image Page</title>
+    <title>Welcome images</title>
     <style>
-        /* Example styling */
-        img {
-            max-width: 100%;
-            height: auto;
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes colorChange {
+            0% {
+                color: #ff7e5f;
+            }
+            25% {
+                color: #feb47b;
+            }
+            50% {
+                color: #ff6f61;
+            }
+            75% {
+                color: #dff9fb;
+            }
+            100% {
+                color: #a29bfe;
+            }
+        }
+
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url('https://github.com/Chol-ui/html_images_pract/blob/master/cloud.jpeg') no-repeat center center fixed,
+                        url('https://github.com/Chol-ui/html_images_pract/blob/master/nature.jpeg') no-repeat center center fixed,
+                        url('https://github.com/Chol-ui/html_images_pract/blob/master/night.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .message {
+            position: relative;
+            z-index: 2;
+            font-size: 3rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+            animation: float 3s ease-in-out infinite, colorChange 6s linear infinite;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Image Page</h1>
-    <img src="cloud.jpeg" alt="Cloud of the image">
-    <img src="nature.jpeg" alt="Cloud of the image">
-    <img src="night.jpeg" alt="Cloud of the image">
-       
+    <div class="overlay"></div>
+    <div class="message">Welcome to Our Website!</div>
 </body>
 </html>
