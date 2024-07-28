@@ -5,59 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Background Images Example</title>
     <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            font-family: Arial, sans-serif;
-            color: white;
-        }
-
-        .section {
-            width: 80%;
-            height: 30vh;
+        .section-1 {
+            height: 300px;
+            background-image: url('image1.jpg');
             background-size: cover;
-            background-position: center;
-            margin: 10px 0;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            background-position: center center;
+            background-repeat: no-repeat;
         }
 
-        .nature {
-            background-image: url('https://github.com/Chol-ui/html_images_pract/blob/master/nature.jpeg');
-        }
-        .night {
-            background-image: url('https://github.com/Chol-ui/html_images_pract/blob/master/night.jpeg');
-        }
-
-        .cloud {
-            background-image: url('https://github.com/Chol-ui/html_images_pract/blob/master/cloud.jpeg');
-        }
-
-        .caption {
-            font-size: 1.5rem;
-            background: rgba(0, 0, 0, 0.4);
-            padding: 10px;
-            border-radius: 5px;
+        .section-2 {
+            height: 300px;
+            background-image: url('image2.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
 <body>
-    <div class="section nature">
-        <div class="caption">Nature</div>
-    </div>
-    <div class="section night">
-        <div class="caption">Night</div>
-    </div>
-
-    <div class="section cloud">
-        <div class="caption">Cloud</div>
-    </div>
+    <div class="section-1"></div>
+    <div class="section-2"></div>
 </body>
 </html>
